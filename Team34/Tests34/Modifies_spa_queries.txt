@@ -1,0 +1,150 @@
+1 - Select stmt ModifiesS(stmt-syn, wildcard)
+stmt s;
+Select s such that Modifies(s, _)
+1,2,3,4,5,6,7,8,10,11,13,14,16,18,19,20
+5000
+2 - Select stmt ModifiesS(stmt-syn, identity)
+stmt s;
+Select s such that Modifies(s, "error")
+4,7,10,13,16
+5000
+3 - Select stmt ModifiesS(stmt-syn, syn)
+stmt s; variable v;
+Select s such that Modifies(s, v)
+1,2,3,4,5,6,7,8,10,11,13,14,16,18,19,20
+5000
+4 - Select variable ModifiesS(integer, wildcard)
+variable v;
+Select v such that Modifies(18, _)
+fizz,buzz,fizzbuzz,error,x,y,z,xplusy
+5000
+5 - Select variable ModifiesS(integer, identity)
+variable v;
+Select v such that Modifies(8, "fizzbuzz")
+fizz,buzz,fizzbuzz,error,x,y,z,xplusy
+5000
+6 - Select stmt ModifiesS(integer, syn)
+variable v;
+Select v such that Modifies(11, v)
+fizz
+5000
+7 - Select stmt ModifiesS(wildcard, wildcard)
+stmt s;
+Select s such that Modifies(_, _)
+SemanticError
+5000
+8 - Select stmt ModifiesS(wildcard, identity)
+stmt s;
+Select s such that Modifies(_, "x")
+SemanticError
+5000
+9 - Select stmt Modifies(wildcard, syn)
+stmt s; variable v;
+Select s such that Modifies(_, v)
+SemanticError
+5000
+10 - Select assign ModifiesS(assign, stmt#)
+assign a;
+Select a such that Modifies(a, 1)
+SyntaxError
+5000
+11 - Select read ModifiesS(read, stmt syn)
+stmt s; read r;
+Select r such that Modifies(r, s)
+SemanticError
+5000
+12 - Select print ModifiesS(print, procedure-syn)
+procedure p; print pr;
+Select pr such that Modifies(pr, p)
+SemanticError
+5000
+13 - Select while ModifiesS(while, constant-syn)
+while w; constant c;
+Select w such that Modifies(w, c)
+SemanticError
+5000
+14 - Select stmt ModifiesS(stmt, std::string)
+stmt s;
+Select s such that Modifies(s, "hehe")
+none
+5000
+15 - Select stmt ModifiesS(stmt#, syn)
+variable v;
+Select v such that Modifies(13, v)
+buzz, error
+5000
+16 - Select procedure ModifiesP(syn, wildcard)
+procedure p;
+Select p such that Modifies(p, _)
+main,fakefizzbuzz,foo
+5000
+17 - Select procedure ModifiesP(syn, identity)
+procedure p;
+Select p such that Modifies(p, "error")
+main,fakefizzbuzz
+5000
+18 - Select procedure ModifiesP(syn, syn)
+procedure p; variable v;
+Select p such that Modifies(p, v)
+main,fakefizzbuzz,foo
+5000
+19 - Select variable ModifiesP(identity, wildcard)
+variable v;
+Select v such that Modifies("main", _)
+fizz,buzz,fizzbuzz,error,x,y,z,xplusy
+5000
+20 - Select variable ModifiesP(identity, identity)
+variable v;
+Select v such that Modifies("fakefizzbuzz", "fizzbuzz")
+fizz,buzz,fizzbuzz,error,x,y,z,xplusy
+5000
+21 - Select variable ModifiesP(identity, syn)
+variable v;
+Select v such that Modifies("foo", v)
+y,z,xplusy
+5000
+22 - Select procedure ModifiesP(procedure-syn, stmt#)
+procedure p;
+Select p such that Modifies(p, 1)
+SyntaxError
+5000
+23 - Select procedure ModifiesP(procedure-syn, stmt-syn)
+procedure p; stmt s;
+Select p such that Modifies(p, s)
+SemanticError
+5000
+24 - Select procedure ModifiesP(procedure-syn, read-syn)
+procedure p; read r;
+Select p such that Modifies(p, r)
+SemanticError
+5000
+25 - Select procedure ModifiesP(procedure-syn, assign-syn)
+procedure p; assign a;
+Select p such that Modifies(p, a)
+SemanticError
+5000
+26 - Select procedure ModifiesP(procedure-syn, while-syn)
+procedure p; while w;
+Select p such that Modifies(p, w)
+SemanticError
+5000
+27 - Select procedure ModifiesP(procedure-syn, if-syn)
+procedure p; if ifs;
+Select p such that Modifies(p, ifs)
+SemanticError
+5000
+28 - Select procedure ModifiesP(procedure-syn, constant-syn)
+procedure p; constant c;
+Select p such that Modifies(p, c)
+SemanticError
+5000
+29 - Select stmt ModifiesP(procedure-syn, std::string)
+stmt s;
+Select s such that Modifies(s, "hehe")
+none
+5000
+30 - Select stmt Modifies(stmt#, syn) return none
+variable v;
+Select v such that Modifies(9, v)
+none
+5000

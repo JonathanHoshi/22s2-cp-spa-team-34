@@ -1,0 +1,49 @@
+procedure gz {
+	call league;
+	call aram;
+}
+
+procedure league {
+	read player;
+	print player;
+}
+
+procedure aram {
+	read game;
+	read giveUp;
+	played = 0;
+	while (((win <= 0) || (desire >= 50)) && (played < giveUp)) {
+		call fight;
+		if (played >= giveUp) then {
+			print failed;
+			call quit;
+		} else {
+			print tryAgain;
+		}
+		played = played + 1;
+	}
+	call showDetails;
+}
+
+procedure fight {
+	read chance;
+	read desire;
+	if ((chance - desire) > 50) then {
+		win = win + 1;
+	} else {
+		read desire;
+	}
+	game = game + 1;
+}
+
+procedure showDetails {
+	print win;
+	lose = played - win;
+	print lose;
+	print played;
+}
+
+procedure quit {
+	print aram;
+	print questionLife;
+}

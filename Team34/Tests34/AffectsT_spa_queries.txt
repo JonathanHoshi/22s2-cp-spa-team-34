@@ -1,0 +1,175 @@
+1 - Affects*(x, y) is TRUE, same scope
+
+Select BOOLEAN such that Affects*(2, 3)
+TRUE
+5000
+2 - Affects*(x, y) is TRUE, different scope
+
+Select BOOLEAN such that Affects*(29, 35)
+TRUE
+5000
+3 - Affects*(x, y) is TRUE, assign inbetween (CFG avoided)
+
+Select BOOLEAN such that Affects*(37, 47)
+TRUE
+5000
+4 - Affects*(x, y) is TRUE, read inbetween (CFG avoided)
+
+Select BOOLEAN such that Affects*(37, 47)
+TRUE
+5000
+5 - Affects*(x, y) is TRUE, call inbetween (CFG avoided)
+
+Select BOOLEAN such that Affects*(37, 47)
+TRUE
+5000
+6 - Affects*(x, y) is TRUE, while loop uses and modifies
+
+Select BOOLEAN such that Affects*(33, 33)
+TRUE
+5000
+7 - Affects*(x, y) is FALSE, same scope, assign
+
+Select BOOLEAN such that Affects*(1, 3)
+FALSE
+5000
+8 - Affects*(x, y) is FALSE, same scope, read
+
+Select BOOLEAN such that Affects*(10, 12)
+FALSE
+5000
+9 - Affects*(x, y) is FALSE, same scope, call
+
+Select BOOLEAN such that Affects*(4, 6)
+FALSE
+5000
+10 - Affects*(x, y) is FALSE, different scope, assign
+
+Select BOOLEAN such that Affects*(6, 10)
+FALSE
+5000
+11 - Affects*(x, y) is FALSE, different scope, read
+
+Select BOOLEAN such that Affects*(17, 21)
+FALSE
+5000
+12 - Affects*(x, y) is FALSE, different scope, call
+
+Select BOOLEAN such that Affects*(4, 15)
+FALSE
+5000
+13 - Affects*(x, y) is TRUE, unrelated assign inbetween
+
+Select BOOLEAN such that Affects*(31, 48)
+TRUE
+5000
+14 - Affects*(x, y) is TRUE, unrelated read inbetween
+
+Select BOOLEAN such that Affects*(24, 26)
+TRUE
+5000
+15 - Affects*(x, y) is TRUE, unrelated call inbetween
+
+Select BOOLEAN such that Affects*(48, 50)
+TRUE
+5000
+16 - Affects*(s, y) Select stmt response
+stmt s;
+Select s such that Affects*(s, 3)
+2
+5000
+17 - Affects*(a, y) Select assign response
+assign a;
+Select a such that Affects*(a, 3)
+2
+5000
+18 - Affects*(r, y) Select read response
+read r;
+Select r such that Affects*(r, 3)
+none
+5000
+19 - Affects*(p, y) Select print response
+print p;
+Select p such that Affects*(p, 3)
+none
+5000
+20 - Affects*(c, y) Select call response
+call c;
+Select c such that Affects*(c, 3)
+none
+5000
+21 - Affects*(x, y) Select x out of range
+assign a;
+Select a such that Affects*(300, a)
+none
+5000
+22 - Affects*(x, y) Select y out of range
+assign a;
+Select a such that Affects*(a, 300)
+none
+5000
+23 - Affects*(x, y) Select x wildcard out of range
+assign a;
+Select a such that Affects*(_, 300)
+none
+5000
+24 - Affects*(x, y) Select y wildcard out of range
+assign a;
+Select a such that Affects*(300, _)
+none
+5000
+25 - Affects*(x, y) Select x and y out of range
+assign a;
+Select a such that Affects*(300, 400)
+none
+5000
+26 - Affects SyntaxError, case sensitive
+assign a;
+select a such that Affects*(3, a)
+SyntaxError
+5000
+27 - Affects SyntaxError, invalid arg1
+
+Select BOOLEAN such that Affects*("p", 3)
+SyntaxError
+5000
+28 - Affects SyntaxError, invalid arg2
+
+Select BOOLEAN such that Affects*(3, "p")
+SyntaxError
+5000
+29 - Affects SemanticError, invalid arg1
+procedure p;
+Select p such that Affects*(p, 3)
+SemanticError
+5000
+30 - Affects SemanticError, invalid arg2
+procedure p;
+Select p such that Affects*(3, p)
+SemanticError
+5000
+31 - Affects SemanticError, nonexistent synonym arg1
+assign a;
+Select a such that Affects*(b, 3)
+SemanticError
+5000
+32 - Affects SemanticError, nonexistent synonym arg2
+assign a;
+Select a such that Affects*(3, b)
+SemanticError
+5000
+33 - Affects SemanticError, repeated synonym
+assign a; stmt a;
+Select a such that Affects*(3, a)
+SemanticError
+5000
+34 - Affects*(x, y) Select if response
+if ifs;
+Select ifs such that Affects*(_, ifs)
+none
+5000
+35 - Affects*(x, y) Select while response
+while w;
+Select w such that Affects*(_, w)
+none
+5000

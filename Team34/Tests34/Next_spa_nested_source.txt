@@ -1,0 +1,39 @@
+procedure main {
+ if (aa == 0) then {
+        bb = 1;
+        cc = 2;
+        if (aa == 0) then {
+            bb = 1;
+            cc = 2;
+            if (aa == 0) then {
+                bb = 1;
+                cc = 2;
+            } else {
+                cc = 1;
+            }
+        } else {
+            cc = 1;
+        }
+    } else {
+        cc = 1;
+    }
+
+    while (bb != 1) {
+       cc = 1;
+       while (aa != 1) {
+          cc = 1;
+          while (aa != 1) {
+            cc = 1;
+          }
+          dd = 2;
+       }
+       dd = 2;
+    }
+    dd = 2;
+}
+
+
+
+
+
+

@@ -1,0 +1,3 @@
+procedure example {
+	assign = 10
+}

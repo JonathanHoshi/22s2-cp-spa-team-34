@@ -1,0 +1,13 @@
+procedure example {
+	if (x + 1 == y + 69 / 4) then {
+		print = (print * 1);
+		if = if / 2;
+	} else {
+		read = read % 1;
+		while = while - 1;
+		call = call * 2;
+	}
+	while ((x + 1) * 5 != y - 2) {
+		call anotherExample;
+	}
+}

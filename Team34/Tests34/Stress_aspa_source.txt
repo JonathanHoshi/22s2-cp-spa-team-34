@@ -1,0 +1,600 @@
+procedure foo1{
+	call foo2;
+}
+procedure foo2{
+	call foo3;
+}
+procedure foo3{
+	call foo4;
+}
+procedure foo4{
+	call foo5;
+}
+procedure foo5{
+	call foo6;
+}
+procedure foo6{
+	call foo7;
+}
+procedure foo7{
+	call foo8;
+}
+procedure foo8{
+	call foo9;
+}
+procedure foo9{
+	call foo10;
+}
+procedure foo10{
+	call foo11;
+}
+procedure foo11{
+	call foo12;
+}
+procedure foo12{
+	call foo13;
+}
+procedure foo13{
+	call foo14;
+}
+procedure foo14{
+	call foo15;
+}
+procedure foo15{
+	call foo16;
+}
+procedure foo16{
+	call foo17;
+}
+procedure foo17{
+	call foo18;
+}
+procedure foo18{
+	call foo19;
+}
+procedure foo19{
+	call foo20;
+}
+procedure foo20{
+	call foo21;
+}
+procedure foo21{
+	call foo22;
+}
+procedure foo22{
+	call foo23;
+}
+procedure foo23{
+	call foo24;
+}
+procedure foo24{
+	call foo25;
+}
+procedure foo25{
+	call foo26;
+}
+procedure foo26{
+	call foo27;
+}
+procedure foo27{
+	call foo28;
+}
+procedure foo28{
+	call foo29;
+}
+procedure foo29{
+	call foo30;
+}
+procedure foo30{
+	call foo31;
+}
+procedure foo31{
+	call foo32;
+}
+procedure foo32{
+	call foo33;
+}
+procedure foo33{
+	call foo34;
+}
+procedure foo34{
+	call foo35;
+}
+procedure foo35{
+	call foo36;
+}
+procedure foo36{
+	call foo37;
+}
+procedure foo37{
+	call foo38;
+}
+procedure foo38{
+	call foo39;
+}
+procedure foo39{
+	call foo40;
+}
+procedure foo40{
+	call foo41;
+}
+procedure foo41{
+	call foo42;
+}
+procedure foo42{
+	call foo43;
+}
+procedure foo43{
+	call foo44;
+}
+procedure foo44{
+	call foo45;
+}
+procedure foo45{
+	call foo46;
+}
+procedure foo46{
+	call foo47;
+}
+procedure foo47{
+	call foo48;
+}
+procedure foo48{
+	call foo49;
+}
+procedure foo49{
+	call foo50;
+}
+procedure foo50{
+	call foo51;
+}
+procedure foo51{
+	call foo52;
+}
+procedure foo52{
+	call foo53;
+}
+procedure foo53{
+	call foo54;
+}
+procedure foo54{
+	call foo55;
+}
+procedure foo55{
+	call foo56;
+}
+procedure foo56{
+	call foo57;
+}
+procedure foo57{
+	call foo58;
+}
+procedure foo58{
+	call foo59;
+}
+procedure foo59{
+	call foo60;
+}
+procedure foo60{
+	call foo61;
+}
+procedure foo61{
+	call foo62;
+}
+procedure foo62{
+	call foo63;
+}
+procedure foo63{
+	call foo64;
+}
+procedure foo64{
+	call foo65;
+}
+procedure foo65{
+	call foo66;
+}
+procedure foo66{
+	call foo67;
+}
+procedure foo67{
+	call foo68;
+}
+procedure foo68{
+	call foo69;
+}
+procedure foo69{
+	call foo70;
+}
+procedure foo70{
+	call foo71;
+}
+procedure foo71{
+	call foo72;
+}
+procedure foo72{
+	call foo73;
+}
+procedure foo73{
+	call foo74;
+}
+procedure foo74{
+	call foo75;
+}
+procedure foo75{
+	call foo76;
+}
+procedure foo76{
+	call foo77;
+}
+procedure foo77{
+	call foo78;
+}
+procedure foo78{
+	call foo79;
+}
+procedure foo79{
+	call foo80;
+}
+procedure foo80{
+	call foo81;
+}
+procedure foo81{
+	call foo82;
+}
+procedure foo82{
+	call foo83;
+}
+procedure foo83{
+	call foo84;
+}
+procedure foo84{
+	call foo85;
+}
+procedure foo85{
+	call foo86;
+}
+procedure foo86{
+	call foo87;
+}
+procedure foo87{
+	call foo88;
+}
+procedure foo88{
+	call foo89;
+}
+procedure foo89{
+	call foo90;
+}
+procedure foo90{
+	call foo91;
+}
+procedure foo91{
+	call foo92;
+}
+procedure foo92{
+	call foo93;
+}
+procedure foo93{
+	call foo94;
+}
+procedure foo94{
+	call foo95;
+}
+procedure foo95{
+	call foo96;
+}
+procedure foo96{
+	call foo97;
+}
+procedure foo97{
+	call foo98;
+}
+procedure foo98{
+	call foo99;
+}
+procedure foo99{
+	call foo100;
+}
+procedure foo100{
+	call foo101;
+}
+procedure foo101{
+	call foo102;
+}
+procedure foo102{
+	call foo103;
+}
+procedure foo103{
+	call foo104;
+}
+procedure foo104{
+	call foo105;
+}
+procedure foo105{
+	call foo106;
+}
+procedure foo106{
+	call foo107;
+}
+procedure foo107{
+	call foo108;
+}
+procedure foo108{
+	call foo109;
+}
+procedure foo109{
+	call foo110;
+}
+procedure foo110{
+	call foo111;
+}
+procedure foo111{
+	call foo112;
+}
+procedure foo112{
+	call foo113;
+}
+procedure foo113{
+	call foo114;
+}
+procedure foo114{
+	call foo115;
+}
+procedure foo115{
+	call foo116;
+}
+procedure foo116{
+	call foo117;
+}
+procedure foo117{
+	call foo118;
+}
+procedure foo118{
+	call foo119;
+}
+procedure foo119{
+	call foo120;
+}
+procedure foo120{
+	call foo121;
+}
+procedure foo121{
+	call foo122;
+}
+procedure foo122{
+	call foo123;
+}
+procedure foo123{
+	call foo124;
+}
+procedure foo124{
+	call foo125;
+}
+procedure foo125{
+	call foo126;
+}
+procedure foo126{
+	call foo127;
+}
+procedure foo127{
+	call foo128;
+}
+procedure foo128{
+	call foo129;
+}
+procedure foo129{
+	call foo130;
+}
+procedure foo130{
+	call foo131;
+}
+procedure foo131{
+	call foo132;
+}
+procedure foo132{
+	call foo133;
+}
+procedure foo133{
+	call foo134;
+}
+procedure foo134{
+	call foo135;
+}
+procedure foo135{
+	call foo136;
+}
+procedure foo136{
+	call foo137;
+}
+procedure foo137{
+	call foo138;
+}
+procedure foo138{
+	call foo139;
+}
+procedure foo139{
+	call foo140;
+}
+procedure foo140{
+	call foo141;
+}
+procedure foo141{
+	call foo142;
+}
+procedure foo142{
+	call foo143;
+}
+procedure foo143{
+	call foo144;
+}
+procedure foo144{
+	call foo145;
+}
+procedure foo145{
+	call foo146;
+}
+procedure foo146{
+	call foo147;
+}
+procedure foo147{
+	call foo148;
+}
+procedure foo148{
+	call foo149;
+}
+procedure foo149{
+	call foo150;
+}
+procedure foo150{
+	call foo151;
+}
+procedure foo151{
+	call foo152;
+}
+procedure foo152{
+	call foo153;
+}
+procedure foo153{
+	call foo154;
+}
+procedure foo154{
+	call foo155;
+}
+procedure foo155{
+	call foo156;
+}
+procedure foo156{
+	call foo157;
+}
+procedure foo157{
+	call foo158;
+}
+procedure foo158{
+	call foo159;
+}
+procedure foo159{
+	call foo160;
+}
+procedure foo160{
+	call foo161;
+}
+procedure foo161{
+	call foo162;
+}
+procedure foo162{
+	call foo163;
+}
+procedure foo163{
+	call foo164;
+}
+procedure foo164{
+	call foo165;
+}
+procedure foo165{
+	call foo166;
+}
+procedure foo166{
+	call foo167;
+}
+procedure foo167{
+	call foo168;
+}
+procedure foo168{
+	call foo169;
+}
+procedure foo169{
+	call foo170;
+}
+procedure foo170{
+	call foo171;
+}
+procedure foo171{
+	call foo172;
+}
+procedure foo172{
+	call foo173;
+}
+procedure foo173{
+	call foo174;
+}
+procedure foo174{
+	call foo175;
+}
+procedure foo175{
+	call foo176;
+}
+procedure foo176{
+	call foo177;
+}
+procedure foo177{
+	call foo178;
+}
+procedure foo178{
+	call foo179;
+}
+procedure foo179{
+	call foo180;
+}
+procedure foo180{
+	call foo181;
+}
+procedure foo181{
+	call foo182;
+}
+procedure foo182{
+	call foo183;
+}
+procedure foo183{
+	call foo184;
+}
+procedure foo184{
+	call foo185;
+}
+procedure foo185{
+	call foo186;
+}
+procedure foo186{
+	call foo187;
+}
+procedure foo187{
+	call foo188;
+}
+procedure foo188{
+	call foo189;
+}
+procedure foo189{
+	call foo190;
+}
+procedure foo190{
+	call foo191;
+}
+procedure foo191{
+	call foo192;
+}
+procedure foo192{
+	call foo193;
+}
+procedure foo193{
+	call foo194;
+}
+procedure foo194{
+	call foo195;
+}
+procedure foo195{
+	call foo196;
+}
+procedure foo196{
+	call foo197;
+}
+procedure foo197{
+	call foo198;
+}
+procedure foo198{
+	call foo199;
+}
+procedure foo199{
+	call foo200;
+}
+procedure foo200{
+	x = 123;
+}

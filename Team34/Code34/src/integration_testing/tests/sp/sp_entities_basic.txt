@@ -1,0 +1,30 @@
+procedure a1 {
+	read a;
+	read = read + 1;
+	print b;
+	if (x == 2) then 
+		{	
+		a = a + 1;
+	} 
+else {
+	a = a + 1;
+}
+	while (y == 2) {
+		a = a + 1;
+		}
+	call a3;
+	call a4;
+	print k;
+}
+
+procedure a2 {
+	print a1;
+	read a2;
+	procedure = procedure + 12;
+	if ((a + b) == c) then { a = a + 1; } else { a = a + 1; }
+	while (d + e == 500) { a = a + 1; }
+}
+
+procedure a3 {
+	a = a + 1;
+}

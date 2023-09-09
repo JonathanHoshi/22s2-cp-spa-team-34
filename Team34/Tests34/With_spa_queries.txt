@@ -1,0 +1,335 @@
+1 - Select BOOLEAN - IDENT = IDENT - TRUE
+
+Select BOOLEAN with "league" = "league"
+TRUE
+5000
+2 - Select BOOLEAN - IDENT = IDENT - FALSE
+
+Select BOOLEAN with "league" = "dota"
+FALSE
+5000
+3 - Select PROC - IDENT = p.procName - Output
+procedure p;
+Select p with "league" = p.procName
+league
+5000
+4 - Select PROC - IDENT = p.procName - Empty
+procedure p;
+Select p with "jon" = p.procName
+none
+5000
+5 - Select PROC - p.procName = IDENT - Output
+procedure p;
+Select p with p.procName = "gz"
+gz
+5000
+6 - Select PROC - p.procName = IDENT - Empty
+procedure p;
+Select p with p.procName = "cx"
+none
+5000
+7 - Select CALL - IDENT = cl.procName - Output
+call cl;
+Select cl with "aram" = cl.procName
+2
+5000
+8 - Select CALL - IDENT = cl.procName - Empty
+call cl;
+Select cl with "die" = cl.procName
+none
+5000
+9 - Select CALL - cl.procName = IDENT - Output
+call cl;
+Select cl with cl.procName = "showDetails"
+15
+5000
+10 - Select CALL - cl.procName = IDENT  - Empty
+call cl;
+Select cl with cl.procName = "poke"
+none
+5000
+11 - Select VAR - IDENT = v.varName - Output
+variable v;
+Select v with "win" = v.varName
+win
+5000
+12 - Select VAR - IDENT = v.varName - Empty
+variable v;
+Select v with "die" = v.varName
+none
+5000
+13 - Select VAR - v.varName = IDENT - Output
+variable v;
+Select v with v.varName = "desire"
+desire
+5000
+14 - Select VAR - v.varName = IDENT - Empty
+variable v;
+Select v with v.varName = "dead"
+none
+5000
+15 - Select READ - IDENT = re.varName - Output
+read re;
+Select re with "chance" = re.varName
+16
+5000
+16 - Select READ - IDENT = re.varName - Empty
+read re;
+Select re with "leave" = re.varName
+none
+5000
+17 - Select READ - re.varName = IDENT - Output
+read re;
+Select re with re.varName = "player"
+3
+5000
+18 - Select READ - re.varName = IDENT - Empty
+read re;
+Select re with re.varName = "join"
+none
+5000
+19 - Select PRINT - IDENT = pn.varName - Output
+print pn;
+Select pn with "lose" = pn.varName
+24
+5000
+20 - Select PRINT - IDENT = pn.varName - Empty
+print pn;
+Select pn with "chance" = pn.varName
+none
+5000
+17 - Select PRINT - pn.varName = IDENT - Output
+print pn;
+Select pn with pn.varName = "questionLife"
+27
+5000
+18 - Select PRINT - pn.varName = IDENT - Empty
+print pn;
+Select pn with pn.varName = "desire"
+none
+5000
+19 - Select BOOLEAN - INTEGER = INTEGER - TRUE
+
+Select BOOLEAN with 1 = 1
+TRUE
+5000
+20 - Select BOOLEAN - INTEGER = INTEGER - FALSE
+
+Select BOOLEAN with 1 = 2
+FALSE
+5000
+21 - Select CALL - INTEGER = cl.stmt# - Output
+call cl;
+Select cl with 1 = cl.stmt#
+1
+5000
+22 - Select CALL - INTEGER = cl.stmt# - Empty
+call cl;
+Select cl with 3 = cl.stmt#
+none
+5000
+23 - Select CALL - cl.stmt# = INTEGER - Output
+call cl;
+Select cl with cl.stmt# = 2
+2
+5000
+24 - Select CALL - cl.stmt# = INTEGER  - Empty
+call cl;
+Select cl with cl.stmt# = 8
+none
+5000
+25 - Select READ - INTEGER = re.stmt# - Output
+read re;
+Select re with 3 = re.stmt#
+3
+5000
+26 - Select READ - INTEGER = re.stmt# - Empty
+read re;
+Select re with 4 = re.stmt#
+none
+5000
+27 - Select READ - re.stmt# = INTEGER - Output
+read re;
+Select re with re.stmt# = 6
+6
+5000
+28 - Select READ - re.stmt# = INTEGER - Empty
+read re;
+Select re with re.stmt# = 19
+none
+5000
+29 - Select PRINT - INTEGER = pn.stmt# - Output
+print pn;
+Select pn with 4 = pn.stmt#
+4
+5000
+30 - Select PRINT - INTEGER = pn.stmt# - Empty
+print pn;
+Select pn with 10 = pn.stmt#
+none
+5000
+31 - Select PRINT - pn.stmt# = INTEGER - Output
+print pn;
+Select pn with pn.stmt# = 11
+11
+5000
+32 - Select PRINT - pn.stmt# = INTEGER - Empty
+print pn;
+Select pn with pn.stmt# = 14
+none
+5000
+33 - Select IF - INTEGER = ifs.stmt# - Output
+if ifs;
+Select ifs with 10 = ifs.stmt#
+10
+5000
+34 - Select IF - INTEGER = ifs.stmt# - Empty
+if ifs;
+Select ifs with 19 = ifs.stmt#
+none
+5000
+35 - Select IF - ifs.stmt# = INTEGER - Output
+if ifs;
+Select ifs with ifs.stmt# = 18
+18
+5000
+36 - Select IF - ifs.stmt# = INTEGER - Empty
+if ifs;
+Select ifs with ifs.stmt# = 24
+none
+5000
+37 - Select WHILE - INTEGER = w.stmt# - Output
+while w;
+Select w with 8 = w.stmt#
+8
+5000
+38 - Select WHILE - INTEGER = w.stmt# - Empty
+while w;
+Select w with w.stmt# = 7
+none
+5000
+39 - Select WHILE - w.stmt# = INTEGER - Output
+while w;
+Select w with w.stmt# = 8
+8
+5000
+40 - Select WHILE - w.stmt# = INTEGER - Empty
+while w;
+Select w with w.stmt# = 5
+none
+5000
+37 - Select ASSIGN - INTEGER = a.stmt# - Output
+assign a;
+Select a with 14 = a.stmt#
+14
+5000
+38 - Select ASSIGN - INTEGER = a.stmt# - Empty
+assign a;
+Select a with 6 = a.stmt#
+none
+5000
+39 - Select ASSIGN - a.stmt# = INTEGER - Output
+assign a;
+Select a with a.stmt# = 21
+21
+5000
+40 - Select ASSIGN - a.stmt# = INTEGER - Empty
+assign a;
+Select a with a.stmt# = 21
+21
+5000
+41 - Select CONST - INTEGER = c.value - Output
+constant c;
+Select c with 50 = c.value
+50
+5000
+42 - Select CONST - INTEGER = c.value - Empty
+constant c;
+Select c with 69 = c.value
+none
+5000
+43 - Select CONST - c.value = INTEGER - Output
+constant c;
+Select c with c.value = 1
+1
+5000
+44 - Select CONST - c.value = INTEGER - Empty
+constant c;
+Select c with c.value = 77
+none
+5000
+45 - Select BOOLEAN - re.stmt# = pn.stmt# - FALSE
+read re; print pn;
+Select BOOLEAN with re.stmt# = pn.stmt#
+FALSE
+5000
+46 - Select BOOLEAN - re.varName = pn.varName - TRUE
+read re; print pn;
+Select BOOLEAN with re.varName = pn.varName
+TRUE
+5000
+47 - Select BOOLEAN - cl.stmt# = pn.stmt# - FALSE
+call cl; print pn;
+Select BOOLEAN with cl.stmt# = pn.stmt#
+FALSE
+5000
+48 - Select BOOLEAN - cl.procName = pn.varName - TRUE
+call cl; print pn;
+Select BOOLEAN with cl.procName = pn.varName
+TRUE
+5000
+49 - Select BOOLEAN - a.stmt = s.stmt# - TRUE
+assign a; stmt s;
+Select BOOLEAN with a.stmt# = s.stmt#
+TRUE
+5000
+50 - Select BOOLEAN - cl.stmt# = s.stmt# and c.value = 50 - TRUE
+call cl; constant c; assign a; stmt s;
+Select BOOLEAN with cl.stmt# = s.stmt# and c.value = 50
+TRUE
+5000
+51 - Select PROC - cl.procName = p.procName - Output
+call cl; procedure p;
+Select p with cl.procName = p.procName
+aram, league, showDetails, quit, fight
+5000
+52 - Select PROC - p.procName = p.procName - Output
+procedure p;
+Select p with p.procName = p.procName
+gz, league, aram, fight, showDetails, quit
+5000
+53 - Select VAR - v.varName = pn.varName - Output
+variable v; print pn;
+Select v with v.varName = pn.varName
+player, aram, failed, lose, played, questionLife, tryAgain, win
+5000
+54 - Select READ VAR - re.varName = pn.varName - Output
+read re; print pn;
+Select re.varName with re.varName = pn.varName
+player
+5000
+55 - Select CALL - cl.procName = v.varName and v.varName = cl.procName - Output
+call cl; variable v;
+Select cl with cl.procName = v.varName and v.varName = cl.procName
+2
+5000
+56 - SyntaxError - Invalid input - c.value = -1
+constant c;
+Select BOOLEAN with c.value = -1
+SyntaxError
+5000
+57 - SemanticError - Invalid comparision - INT = IDENT
+
+Select BOOLEAN with 1 = "x"
+SemanticError
+5000
+58 - SemanticError - Invalid comparision - cl.stmt# = cl.procName
+call cl;
+Select BOOLEAN with cl.stmt# = cl.procName
+SemanticError
+5000
+59 - Select CALL - cl.procName = IDENT and IDENT = cl.procName - Output
+call cl;
+Select cl with cl.procName = "aram" and "aram" = cl.procName
+2
+5000

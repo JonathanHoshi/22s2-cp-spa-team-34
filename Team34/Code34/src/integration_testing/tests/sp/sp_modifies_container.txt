@@ -1,0 +1,13 @@
+procedure main {
+if (b == 1) then {
+	read x;
+	y = y * 2;
+	} else {
+		t = y + z;
+		print a;
+	}
+	while (r == 2) {
+		x = y * 2;
+		print k;
+	}
+}

@@ -1,0 +1,52 @@
+procedure East {
+	call find;
+	long = tx + x * z * tz + 9;
+	lad = ty + y * z * tz + 6;
+	while (lad < 0) {
+		x = y * z + 8;
+		if (lad > x) then {
+			lad = z + (x * y) * z - 9;
+		} else {
+			y = lad * y * z;
+			call find;
+		}
+	} 
+	long = x * y * z * lad + long;
+	print long;
+}
+
+procedure find {
+	while (6 == 9) {
+		if (4 == 4) then {
+			long = (long + lad) - (x + z);
+			lad = (long + lad - (x + z) + y);
+		} else {
+			y = x * (y * z) + (lad + long);
+			x = x * y * z + lad + long;
+		}
+
+	}
+	if (y < long) then {
+		lad = x + z;
+	} else {
+		long = y + z;
+	}
+	call Check;
+}
+
+procedure Check {
+	read x;
+	read y;
+	while ((lad != 0) && (long != 0)) {
+		long = lad / 10;
+		while (3 + 6 == 9) {
+			z = x * y;
+			z = z;
+			z = x + y * z;
+		}
+		long = lad + z * y - long;
+		lad = long + z * x - lad;
+	}
+	town = lad + long;
+	print find;
+}

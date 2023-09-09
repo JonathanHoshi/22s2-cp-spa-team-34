@@ -1,0 +1,30 @@
+1 - comment
+variable v; procedure p;
+Select v
+b, read, x, y, z
+5000
+2 - comment
+variable k; procedure p;
+Select k
+b, read, x, y, z
+5000
+3 - comment
+variable k; procedure p;
+Select p
+main, p1, p2
+5000
+4 - comment
+variable v; procedure p;
+Select v such that Modifies(p, v)
+b, read, x, y, z
+5000
+5 - comment
+variable v; procedure p;
+Select p such that Modifies(p, v)
+p1, p2
+5000
+6 - comment
+variable v, v1; procedure p;
+Select v
+b, read, x, y, z
+5000

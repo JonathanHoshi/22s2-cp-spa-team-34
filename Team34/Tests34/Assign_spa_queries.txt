@@ -1,0 +1,190 @@
+1 - Select all assignment
+assign a;
+Select a
+2, 3, 5, 8, 10, 11, 13, 14, 15, 16
+5000
+2 - Synonym, Full Match: Multi Result
+assign a; variable v;
+Select a pattern a (v, "ryan")
+10, 11
+5000
+3 - Synonym, Full Match: Single Result
+assign a; variable v;
+Select a pattern a (v, "nat + 1")
+5
+5000
+4 - Synonym, Full Match: No Result
+assign a; variable v;
+Select a pattern a (v, "cx + 69")
+none
+5000
+5 - Synonym, Partial Match: Multi Result
+assign a; variable v;
+Select a pattern a (v, _"nat + 1"_)
+5, 14
+5000
+6 - Synonym, Partial Match: Single Result
+assign a; variable v;
+Select a pattern a (v, _"nat * nat"_)
+15
+5000
+7 - Synonym, Partial Match: No Result
+assign a; variable v;
+Select a pattern a (v, _"nat * jon"_)
+none
+5000
+8 - Synonym, Partial Match (Full): Multi Result
+assign a; variable v;
+Select a pattern a (v, _"7"_)
+3, 16
+5000
+9 - Synonym, Partial Match (Full): Single Result
+assign a; variable v;
+Select a pattern a (v, _"nat + jon * (cx + 69)"_)
+13
+5000
+10 - IDENT, Full Match: Multi Result
+assign a;
+Select a pattern a ("outong", "7")
+16
+5000
+11 - IDENT, Full Match: Single Result
+assign a;
+Select a pattern a ("nat", "nat + 1")
+5
+5000
+12 - IDENT, Full Match: No Result
+assign a;
+Select a pattern a ("cx", "69")
+none
+5000
+13 - IDENT, Partial Match: Multi Result
+assign a;
+Select a pattern a ("nat", _"nat + 1"_)
+5, 14
+5000
+14 - IDENT, Partial Match: Single Result
+assign a;
+Select a pattern a ("outong", _"ryan + cx"_)
+15
+5000
+15 - IDENT, Partial Match: No Result
+assign a;
+Select a pattern a ("ryan", _"69"_)
+none
+5000
+16 - IDENT, Partial Match (Full): Single Result
+assign a; variable v;
+Select a pattern a ("cx", _"5"_)
+2
+5000
+17 - Wildcard, Full Match: Multi Result
+assign a;
+Select a pattern a (_, "ryan")
+10, 11
+5000
+18 - Wildcard, Full Match: Single Result
+assign a;
+Select a pattern a (_, "nat + 1")
+5
+5000
+19 - Wildcard, Full Match: No Result
+assign a;
+Select a pattern a (_, "cx + 69")
+none
+5000
+20 - Wildcard, Partial Match: Multi Result
+assign a;
+Select a pattern a (_, _"(nat + 1)"_)
+5, 14
+5000
+21 - Wildcard, Partial Match: Single Result
+assign a;
+Select a pattern a (_, _"nat * nat"_)
+15
+5000
+22 - Wildcard, Partial Match: No Result
+assign a;
+Select a pattern a (_, _"nat * jon"_)
+none
+5000
+23 - Wildcard, Partial Match (Full): Multi Result
+assign a;
+Select a pattern a (_, _"7"_)
+3, 16
+5000
+24 - Wildcard, Partial Match (Full): Single Result
+assign a;
+Select a pattern a (_, _"nat + jon * (cx + 69)"_)
+13
+5000
+25 - Wildcard, Wildcard
+assign a;
+Select a pattern a (_, _)
+2, 3, 5, 8, 10, 11, 13, 14, 15, 16
+5000
+26 - IDENT, Wildcard
+assign a;
+Select a pattern a ("fred", _)
+3, 8, 10, 13
+5000
+27 - Synonym, Wildcard
+assign a; variable v;
+Select a pattern a (v, _)
+2, 3, 5, 8, 10, 11, 13, 14, 15, 16
+5000
+28 - Single Variable
+assign a;
+Select a pattern a ("fred", "ryan")
+10
+5000
+29 - Single Constant
+assign a;
+Select a pattern a ("fred", "7")
+3
+5000
+30 - Syntax, Invalid Expression: Operator
+assign a;
+Select a pattern a ("fred", "nat ++ jon")
+SyntaxError
+5000
+31 - Syntax, Invalid Expression: Spaces
+assign a;
+Select a pattern a ("fred", _"cx + 6 9"_)
+SyntaxError
+5000
+32 - Semantic, Invalid Synonym
+assign a; stmt s;
+Select a pattern s ("nat", "nat + 1")
+SemanticError
+5000
+33 - Semantic, Undeclared Synonym
+assign a; stmt s;
+Select a pattern a1 ("nat", "nat + 1")
+SemanticError
+5000
+34 - Semantic, Repeated Synonym
+assign a; stmt a;
+Select a pattern a ("nat", "nat + 1")
+SemanticError
+5000
+35 - Relation Synonym
+assign Follows; variable Modifies;
+Select Follows pattern Follows (Modifies, "nat + 1")
+5
+5000
+36 - Entity Synonym
+assign variable; variable assign;
+Select variable pattern variable (assign, "5")
+2
+5000
+37 - Semantic, if invalid brackets
+assign a;
+Select a pattern a ("nat", _, _)
+SemanticError
+5000
+38 - Assign While Syntax
+while w;
+Select w pattern w("a", _""_)
+SyntaxError
+5000

@@ -1,0 +1,160 @@
+1 - All WildCard
+stmt s;
+Select s such that Next* (_, _)
+1, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20, 3, 4, 5, 6, 7, 8, 9
+5000
+2 - WildCard and statement
+stmt s;
+Select s such that Next*(_, s)
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+5000
+3 - Statement and WildCard
+stmt s;
+Select s such that Next* (s, _)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
+5000
+4 - Common Next*
+stmt s;
+Select s such that Next* (1, s)
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+5000
+5 - Common Next*
+stmt s;
+Select s such that Next* (s, 1)
+none
+5000
+6 - stmt before if
+stmt s;
+Select s such that Next* (2, s)
+3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+5000
+7 - stmt before if
+stmt s;
+Select s such that Next* (s, 2)
+1
+5000
+8 - if condition
+stmt s;
+Select s such that Next* (3, s)
+4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+5000
+9 - if condition
+stmt s;
+Select s such that Next* (s, 3)
+1, 2
+5000
+10 - stmt inside if
+stmt s;
+Select s such that Next* (4, s)
+5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+5000
+11 - stmt inside if opposite
+stmt s;
+Select s such that Next* (s, 4)
+1, 2, 3
+5000
+12 - stmt at the end of if
+stmt s;
+Select s such that Next* (5, s)
+7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+5000
+13 - stmt at the end of if opposite
+stmt s;
+Select s such that Next* (s, 5)
+1, 2, 3, 4
+5000
+14 - while condition
+stmt s;
+Select s such that Next* (7, s)
+7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+5000;
+15 - while condition opposite
+stmt s;
+Select s such that Next* (s, 7)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+5000;
+16 - end of while clause
+stmt s;
+Select s such that Next* (10, s)
+7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+5000
+17 - end of while clause opposite
+stmt s;
+Select s such that Next* (s, 10)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+5000
+18 - while inside while
+stmt s;
+Select s such that Next* (12, s)
+11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+5000
+19 - while inside while opposite
+stmt s;
+Select s such that Next* (s, 12)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+5000
+20 - end of while inside while
+stmt s;
+Select s such that Next* (13, s)
+11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+5000
+21 - end of while inside while opposite
+stmt s;
+Select s such that Next* (s, 13)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+5000
+22 - while condition inside if
+stmt s;
+Select s such that Next* (17, s)
+17, 18
+5000
+23 - while condition inside if opposite
+stmt s;
+Select s such that Next* (s, 17)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+24 - while inside if
+stmt s;
+Select s such that Next* (18, s)
+17,18
+5000
+25 - while inside if
+stmt s;
+Select s such that Next* (s, 18)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+26 - Syntax error wrong key word
+stmt s;
+Select s such that next* (s, 18)
+SyntaxError
+5000
+27 - Syntax error wrong type of input
+stmt s;
+Select s such that Next* (s, "18")
+SyntaxError
+5000
+28 - Syntax error wrong type of input
+stmt s;
+Select s such that Next* (s, '18')
+SyntaxError
+5000
+29 - stmt num too small
+stmt s;
+Select s such that Next* (s, 0)
+none
+5000
+30 - stmt num too big
+stmt s;
+Select s such that Next* (s, 100)
+none
+5000
+31 - semantic error select variable
+variable v;
+Select v such that Next* (v, 100)
+SemanticError
+5000
+32 - semantic error select procedure
+procedure p;
+Select p such that Next* (p, 100)
+SemanticError
+5000

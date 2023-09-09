@@ -1,0 +1,33 @@
+procedure a1 {
+	if ((a == 1) && ((b == (c + d) * e + f) && (h == 1))) then {
+		while ((i == 1) && (j == 2)) {
+			k = l + m;
+		}
+	} else {
+		while ((k == 1) && (l == 2)) {
+			n = o + p;
+			if (z == y) then {
+				w = 3;
+			} else {
+				v = 3;
+			}
+		}
+	}
+
+	while (q == 2) {
+		r = s + t;
+	}
+}
+
+procedure a2 {
+	while ((a == 1) && ((b == (c + d) * e + f) && (h == 1))) {
+		if ((i == 1) && (j == 2)) then {
+			k = l + m;
+		} else {
+			while ((k == 1) && (l == 2)) {
+				n = o + p;
+			}
+		}
+	}
+	r = s + t;
+}

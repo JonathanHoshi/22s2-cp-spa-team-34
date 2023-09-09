@@ -1,0 +1,5 @@
+procedure main {
+	print x;
+	read y;
+	z = 1 + 2;
+}

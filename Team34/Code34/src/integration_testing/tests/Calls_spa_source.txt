@@ -1,0 +1,28 @@
+procedure p1 {
+	call p2;
+	if (x == y) then {
+		call p3;
+	} else {
+		call p4;
+	}
+}
+
+procedure p2 {
+	call p5;
+}
+
+procedure p3 {
+	call p6;
+}
+
+procedure p4 {
+	print nat;
+}
+
+procedure p5 {
+	print cx;
+}
+
+procedure p6 {
+	print jon;
+}

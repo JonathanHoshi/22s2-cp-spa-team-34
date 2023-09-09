@@ -1,0 +1,35 @@
+procedure main {
+    aa = 0;
+    bb = 0;
+    if (aa == 0) then {
+        bb = 1;
+        cc = 2;
+    } else {
+        cc = 1;
+    }
+
+    while (bb != 1) {
+        if (aa == 1) then {
+            cc = 2;
+        } else {
+            cc = 3;
+        }
+    }
+
+    while (bb != 1) {
+        while (aa != 1) {
+            cc = 1;
+        }
+    }
+
+    if (aa == 1) then {
+        bb = 2;
+        cc = 3;
+        while (cc < 4) {
+            cc = cc + 1;
+        }
+    } else {
+        bb = 3;
+        cc = 2;
+    }
+}

@@ -1,0 +1,18 @@
+procedure main {
+	x = ((x + y)) + z + y;
+	x = x + ((y + z)) + y;
+	x = x + y + 3 + z + y;
+	x = x + y + (3 + z) + y;
+
+	if (x == y + 1) then {
+		read a;
+		a = b + c * d;
+	} else {
+		a = a + 1;
+	}
+	
+	while (x + y + z == y + a + 1) {
+		b = b + 1;
+	}
+	print = read + procedure * 3;
+}

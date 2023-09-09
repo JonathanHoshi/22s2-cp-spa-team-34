@@ -1,0 +1,55 @@
+procedure Bako {
+  read nat;
+  cx = 5;
+  fred = 1;
+  
+  while (nat < 5 + fred) {
+     nat = nat + 1;
+     read jon;
+
+	if (jon ==fred) then {
+	   fred =  nat + jon;
+     } else {
+	   print nat;
+     }
+
+     fred = nat + jon * (cx + 69);
+  }
+  nat = ((nat * nat) + 1) * (fred + cx * jon);
+
+  print nat;
+  call Pain;
+}
+
+procedure Peko {
+  while (fred < 1) {
+     fred = fred - 1;
+	jon = jon + 6;
+     nat = nat / 3;
+     cx =  cx * 7;
+     outong = outong % 2;
+     ryan = ryan + 5;
+     
+  }
+  if (team < 100) then {
+     team =  cx * fred + (nat + outong) * (ryan + jon);
+  } else {
+     team = quit;
+  }
+
+  print team;
+}
+
+procedure Pain {
+  while (fred < 1) {
+     fred = fred / nat;
+  }
+  nat = (fred + cx) * jon;
+
+  print fred;
+
+  team = cx * jon;
+
+  read quit;
+  call Peko;
+}

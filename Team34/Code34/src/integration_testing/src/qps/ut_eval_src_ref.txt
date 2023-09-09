@@ -1,0 +1,193 @@
+Unit_Test_Source.txt
+
+ModifiesUsesTest
+
+procedure fred {
+1.	read x;
+2.	y = 2;
+3.  print z;
+}
+	
+procedure nat {
+4.	read x;
+5.  z = 3;
+}
+	
+procedure ryan {
+6.	x = 1;
+7.  if (w == 1) then {
+8.		y = x;
+	} else {
+9.		while (b == c) {
+10.			a = a + 1;
+		}
+	}
+}
+
+procedure jon {
+11.	read d;
+12. while (e == 1) {
+13.		call cx;
+	}
+}
+
+procedure cx {
+14. p = l + a + y
+15. f = f + x + i + v;
+16. print k;
+}
+
+
+
+ParentFollowsTest
+
+procedure fred {
+1.	read x;
+2.	y = 2;
+3.  print z;
+}
+	
+procedure ryan {
+4.	x = 1;
+5.  if (w == 1) then {
+6.		y = x;
+	} else {
+7.		while (b == c) {
+8.			a = a + 1;
+		}
+9.		d = e + f;
+	}
+10.	g = o;
+}
+
+
+CallsTest
+
+procedure fred {
+1.	call cx;
+2.	call ryan;
+3.	read sp;
+}
+
+procedure cx {
+4.	call jon;
+5.	call nat;
+}
+
+procedure jon {
+6.	read qps;
+}
+
+procedure nat {
+7.	read pkb;
+}
+
+procedure ryan {
+8.	call jon;
+}
+
+
+EntityTest/WithTest
+
+procedure fred {
+1.	call cx;
+2.	read sp;
+3.	a = 1;
+}
+
+procedure cx {
+4.	call jon;
+5.	print sp;
+6.	b = c + 2;
+}
+
+procedure jon {
+7.	read qps;
+8.	d = d + 7
+}
+
+procedure nat {
+9.	read pkb;
+10.	if (e == f) then {
+11.		print pkb;
+	} else {
+12.		g = h;
+	}
+}
+
+procedure ryan {
+13.	call jon;
+14.	while (i != j) {
+15.		print qps;
+	}
+}
+
+
+AssignIfWhilePatternTest
+
+procedure jon {
+1.  mood = random;
+2.	while (mood != tired) {
+3.		if (mood == work) then {
+4.			call contemplate;
+		} else {
+5.			call play;
+		}
+	}
+6.	call sleep;
+}
+
+procedure contemplate {
+7.	chance = random;
+8.	if (chance <= fifty) then {
+9.		mood = lazy;
+	} else {
+10.		mood = work;
+	}
+}
+
+procedure play {
+11.	chance = random;
+12.	if (chance <= ninety) then {
+13.		mood = play;
+	} else {
+14.		mood = lazy;
+	}
+}
+
+procedure sleep {
+15.	while ((body + energy) <= threshold ) {
+16.		energy = energy + recover;
+	}
+}
+
+NextTest/AffectsTest
+
+procedure jon {
+1.	x = 1;
+2.	print x;
+3.	y = x;
+}
+
+procedure cx {
+4.	a = 69;
+5.	call fred;
+6.	b = a;
+}
+
+procedure fred {
+7.	read a;
+}
+
+procedure nat {
+8.	j = 1;
+9.	print j;
+10.	k = j;
+11. if (k == 1) then {
+12.		l = k;
+	} else {
+13.		while (k == 1) {
+14.			k = k + 1;	
+		}
+	}
+}

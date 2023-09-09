@@ -1,0 +1,44 @@
+procedure p1 {
+	a = 1 + b + 2;
+	if (c == 2) then {
+		read c;
+		print d;
+		while (d == 3) {
+			call p2;
+			e = e + 1;
+		}
+	} else {
+		f = g + h;
+		call p3;
+	}
+}
+
+procedure p2 {
+	while (p5 == 3) {
+		if (p3 == p4) then {
+			i = i + 2;		
+		} else {
+			j = j + 3;
+		}
+	}
+	k = 3;
+	call p4;
+}
+
+procedure p3 {
+	k = k + l;
+	l = l + m;
+	call p4;
+}
+
+procedure p4 {
+	while ((n == 3) && (o == 4)) {
+		p = q + r;
+	}
+	print s;
+	read q;
+	call p5;
+}
+procedure p5 {
+	a = a + 1;
+}

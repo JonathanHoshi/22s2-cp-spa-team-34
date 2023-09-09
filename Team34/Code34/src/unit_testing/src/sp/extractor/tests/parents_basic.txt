@@ -1,0 +1,14 @@
+procedure main {
+	if (x == 2) then {
+		read x;
+		x = a + b;
+	} else {
+		read y;
+		y = a + b;
+	}
+	
+	while (y == 2) {
+		print y;
+		y = a + c;
+	}
+}

@@ -1,0 +1,14 @@
+procedure p1 {
+read x;
+	read y;
+read			z;
+}
+
+procedure p2 {
+read read;
+read b;
+}
+
+procedure main {
+
+}

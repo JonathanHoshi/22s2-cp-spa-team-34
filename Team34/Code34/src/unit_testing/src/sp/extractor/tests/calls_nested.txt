@@ -1,0 +1,35 @@
+procedure a1 {
+	call a2;
+	if (x == 3) then {
+		call a2;
+	} else {
+		call a3;
+	}
+}
+
+procedure a2 {
+	while (x == 3) {
+		call a3;
+	}
+}
+
+procedure a3 {
+	call a4;
+	call a6;
+}
+
+procedure a4 {
+	call a5;
+}
+
+procedure a5 {
+	call a7;
+}
+
+procedure a6 {
+	call a5;
+}
+
+procedure a7 {
+	a = a + 1;
+}

@@ -1,0 +1,135 @@
+1 - Select Single: Procedure
+procedure p;
+Select p
+p1, p2, p3, p4
+5000
+2 - Select BOOLEAN: No Clause
+procedure p;
+Select BOOLEAN
+TRUE
+5000
+3 - Select BOOLEAN: Have Result (Single Clause)
+procedure p; variable v;
+Select BOOLEAN such that Modifies(p, v)
+TRUE
+5000
+4 - Select BOOLEAN: No Result (Single Clause)
+procedure p;
+Select BOOLEAN such that Modifies(p, "ryan")
+FALSE
+5000
+5 - Select BOOLEAN: Has Result (Multi Clause)
+procedure p; variable v; assign a;
+Select BOOLEAN such that Uses(p, v) such that Modifies(p, v)
+TRUE
+5000
+6 - Select BOOLEAN: No Result (Multi Clause)
+procedure p; variable v; assign a;
+Select BOOLEAN such that Uses(p, "ryan") such that Modifies(p, "ryan")
+FALSE
+5000
+7 - Select p: Has Result (Multi Clause)
+procedure p; variable v; assign a;
+Select p such that Uses(p, v) such that Modifies(p, v)
+p1, p3, p4
+5000
+8 - Select p: No Result (Multi Clause)
+procedure p; variable v; assign a;
+Select p such that Uses(p, "ryan") such that Modifies(p, "ryan")
+none
+5000
+9 - Select TUPLE (p, v): Different Synonym (No Clause)
+procedure p; variable v;
+Select <p, v>
+p1 a, p1 b, p1 c, p1 d, p1 ryan, p1 nat, p1 jon, p1 fred, p1 cx, p2 a, p2 b, p2 c, p2 d, p2 ryan, p2 nat, p2 jon, p2 fred, p2 cx, p3 a, p3 b, p3 c, p3 d, p3 ryan, p3 nat, p3 jon, p3 fred, p3 cx, p4 a, p4 b, p4 c, p4 d, p4 ryan, p4 nat, p4 jon, p4 fred, p4 cx
+5000
+10 - Select TUPLE (p, v): Same Synonym (No Clause)
+procedure p; variable v;
+Select <p, p>
+p1 p1, p2 p2, p3 p3, p4 p4
+5000
+11 - Select TUPLE (p, v): Has Result (Single Clause)
+procedure p; variable v;
+Select <p, v> such that Modifies(p, v)
+p1 a, p1 b, p1 c, p1 d, p2 nat, p3 jon, p3 fred, p3 cx, p4 cx
+5000
+12 - Select TUPLE (a, v): Has Result (Multi Clause)
+assign a; variable v;
+Select <a, v> such that Uses(a, v) pattern a(v, _)
+5 b
+5000
+13 - Select TUPLE (a, v): No Result (Multi Clause)
+assign a; variable v;
+Select <a, v> such that Uses(a, v) pattern a(v, _) such that Modifies("p2", v)
+none
+5000
+14 - Select BOOLEAN: With BOOLEAN declaration (Multi Clause)
+procedure BOOLEAN;
+Select BOOLEAN
+p1, p2, p3, p4
+5000
+15 - Select TUPLE (p, p, v): Has Result (Single Clause)
+procedure p; variable v;
+Select <p, p, v> such that Modifies(p, v)
+p1 p1 a, p1 p1 b, p1 p1 c, p1 p1 d, p2 p2 nat, p3 p3 jon, p3 p3 fred, p3 p3 cx, p4 p4 cx
+5000
+16 - Select TUPLE (p, p1, v): Has Result (Single Clause)
+procedure p, p1; variable v;
+Select <p, p1, v> such that Modifies(p, v)
+p1 p1 a, p1 p2 a, p1 p3 a, p1 p4 a, p1 p1 b, p1 p2 b, p1 p3 b, p1 p4 b, p1 p1 c, p1 p2 c, p1 p3 c, p1 p4 c, p1 p1 d, p1 p2 d, p1 p3 d, p1 p4 d, p2 p1 nat, p2 p2 nat, p2 p3 nat, p2 p4 nat, p3 p1 jon, p3 p2 jon, p3 p3 jon, p3 p4 jon, p3 p1 fred, p3 p2 fred, p3 p3 fred, p3 p4 fred, p3 p1 cx, p3 p2 cx, p3 p3 cx, p3 p4 cx, p4 p1 cx, p4 p2 cx, p4 p3 cx, p4 p4 cx
+5000
+17 - Select Single: Call Stmt
+call cl;
+Select cl
+11
+5000
+18 - Select Single w Attribute: Call Stmt
+call cl;
+Select cl.procName
+p4
+5000
+19 - Select Single w Attribute: Constant
+constant c;
+Select c.value
+1, 2, 3, 4
+5000
+20 - Select Single w Attribute: Read Stmt
+read re;
+Select re.varName
+nat, jon, fred
+5000
+21 - Select Single w Attribute: Print Stmt
+print pn;
+Select pn.varName
+ryan, cx
+5000
+22 - Select TUPLE w Attribute: Single Call Stmt
+call cl;
+Select <cl.stmt#, cl.procName>
+11 p4
+5000
+23 - Select TUPLE w Attribute: Single Read Stmt
+read re;
+Select <re.stmt#, re.varName>
+8 nat, 9 jon, 10 fred
+5000
+24 - Select TUPLE w Attribute: Single Print Stmt
+print pn;
+Select <pn.stmt#, pn.varName>
+7 ryan, 13 cx
+5000
+25 - Select Single w Attribute: Invalid Attribute Type
+print pn;
+Select <pn.stmt#, pn.procName>
+SemanticError
+5000
+26 - Select Single w Attribute: Invalid Attribute Name
+print pn;
+Select pn.testAttr
+SyntaxError
+5000
+27 - Select Single w TUPLE
+procedure p;
+Select <p>
+p1, p2, p3, p4
+5000

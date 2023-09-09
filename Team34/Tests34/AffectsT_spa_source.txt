@@ -1,0 +1,95 @@
+procedure main {
+    a = 1000;
+    a = 5;
+    b = 50 + a;
+    b = 20 - a;
+    call bar;
+    c = a + b;
+    if (i == 0) then {
+        b = 1;
+        c = 2;
+        d = c;
+        read d;
+        e = d; 
+    } else {
+        fr = 3;
+        call bar;
+        c = 4; 
+    }
+    while (b > 0) {
+        h = g;
+        if (i > j) then {
+            read h; 
+        } else {
+            read h; 
+        }
+        i = h; 
+    }
+    d = b;
+    b = b - 5; 
+} 
+
+procedure foo {
+    a = 1;
+    read cx;
+    b = a;
+    c = b;
+    d = c;
+    cx = cx + 2;
+    e = d;
+    f = e;
+    while (cx > ot) {
+        nt = nt + 1;
+    }
+    if (a >= b) then {
+        b = cx; 
+    } else {
+        a = cx; 
+    }
+    cx = 123;
+    if (ot > cx) then {
+        ry = fr;
+        while (true <= false) {
+            read cx; 
+        } 
+    } else {
+        fr = ry;
+        call wee;
+        if (321 > 321) then {
+            cx = 123; 
+        } else {
+            nt = 321; 
+        } 
+    }
+	jn = cx;
+    g = f;
+    call bar;
+    h = g; 
+} 
+
+procedure bar {
+    if (100 > 100) then {
+        b = 100; 
+    } else {
+        ot = 25;
+        cx = 321; 
+    } 
+} 
+
+procedure wee {
+    a = cx;
+    cx = a;
+    if (cl <= cs) then {
+        a = b;
+        call woo;
+        read cs; 
+    } else {
+        b = a;
+        read cx; 
+    }
+    cl = cx; 
+} 
+
+procedure woo {
+    cx = 1; 
+}

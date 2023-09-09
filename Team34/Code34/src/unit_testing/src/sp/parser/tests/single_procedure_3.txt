@@ -1,0 +1,13 @@
+procedure example {
+	if (!(x != 0)) then {
+		print y;
+		while ((y >= 0) && (x <= 0)) {
+			while ((z < 2) || (x > y)) {
+				call exampleThree;
+			}
+			call exampleTwo;
+		}
+	} else {
+		x = x + 1;
+	}
+}

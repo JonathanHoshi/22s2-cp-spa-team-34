@@ -1,0 +1,20 @@
+procedure p123 {
+	if (h == 2) then {
+		while(a == b) {
+			a = a + 1;
+		}
+		while (c == 1) {
+			a = a + 1;
+		}
+		x = e + f * g;
+		k = 1;
+		print i;
+	} else {
+		read j;
+	}
+
+	while ((o == 2) && (p == 2)) {
+		c = d + e;
+		t = 1;
+	}
+}

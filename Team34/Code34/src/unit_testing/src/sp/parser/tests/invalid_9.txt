@@ -1,0 +1,3 @@
+procedure first {
+	w = 02;
+}

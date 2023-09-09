@@ -1,0 +1,140 @@
+1 - Affects Affects Uses Follows
+stmt s1, s2; assign a, a1, a2; variable v;
+Select <s1, a> such that Affects(a1, 5) and Affects(4, a2) and Uses(s1, v) and Follows(s1, a)
+28 30,4 5
+5000
+2 - ParentT NextT Pattern
+assign a; while w; stmt s;
+Select a such that Parent*(w, a) and Next*(14, s) pattern a("ant", _) with a.stmt# = s.stmt#
+14
+5000
+3 - ParentT ParentT
+while w1, w2, w3;
+Select <w1, w2, w3> such that Parent*(w1, w2) and Parent*(w2, w3)
+2 8 13,21 22 23,32 36 39,32 36 41,32 36 43,32 36 45,32 36 47,32 39 41,32 39 43,32 39 45,32 39 47,32 41 43,32 41 45,32 41 47,32 43 45,32 43 47,32 45 47,36 39 41,36 39 43,36 39 45,36 39 47,36 41 43,36 41 45,36 41 47,36 43 45,36 43 47,36 45 47,39 41 43,39 41 45,39 41 47,39 43 45,39 43 47,39 45 47,41 43 45,41 43 47,41 45 47,43 45 47
+5000
+4 - Affects Affects
+stmt s1, s2; assign a, a1, a2; variable v;
+Select <a1, a2> such that Affects(a1, 5) and Affects(4, a2)
+4 5
+5000
+5 - Affects Affects Follows
+stmt s1, s2; assign a, a1, a2; variable v;
+Select <a1, a2> such that Affects(a1, 5) and Affects(4, a2) and Follows(s1, s2)
+4 5
+5000
+6 - Affects Affects Uses Follows
+stmt s1, s2; assign a, a1, a2; variable v;
+Select <a1, a2> such that Affects(a1, 5) and Affects(4, a2) and Uses(s1, v) and Follows(s1, a)
+4 5
+5000
+7 - AffectsT Uses Follows Modifies
+assign a1, a2; variable v; stmt s;
+Select <a1, a2, v> such that Affects*(a1, a2) and Uses(a1, v) and Follows(a1, s) and Modifies(a1, v)
+14 14 ant,24 24 rhino,4 5 frog
+5000
+8 - AffectsT Uses Follows Modifies
+assign a1, a2; variable v; stmt s;
+Select <a1, a2, s, v> such that Affects*(a1, a2) and Uses(a1, v) and Follows(a1, s) and Modifies(a1, v)
+14 14 15 ant,24 24 25 rhino,4 5 5 frog
+5000
+9 - AffectsT Uses Follows Modifies
+assign a1, a2; variable v; stmt s;
+Select <a1, a2, s, v> such that Affects*(a1, a2) and Uses(a1, v) and Follows(a1, s) and Modifies(a1, v) with a1.stmt# = 24
+24 24 25 rhino
+5000
+10 - AffectsT Uses Follows Modifies
+assign a1, a2; variable v; stmt s;
+Select <a1, a2, s, v> such that Affects*(a1, a2) and Uses(a1, v) and Follows(a1, s) and Modifies(a1, v) with v.varName = "rhino"
+24 24 25 rhino
+5000
+11 - AffectsT NextT
+assign a1, a2; stmt n1, n2;
+Select <n1, a1.stmt#> such that Affects* (a1, a2) and Next*(n1, n2) with a1.stmt# = n1.stmt#
+14 14,24 24,29 29,37 37,4 4,50 50,52 52,53 53
+5000
+12 - Affects Follows Modifies
+stmt s1, s2; variable v;
+Select <s1, s2> such that Affects(s1, s2) and Follows(s1, s2) and Modifies(s1, v)
+4 5,50 51,52 53
+5000
+13 - Affects Follows Modifies ParentT
+stmt s1, s2; variable v;
+Select <s1, s2> such that Affects(s1, s2) and Follows(s1, s2) and Modifies(s1, v) and Parent*(s1, s2)
+none
+5000
+14 - Affects Follows Modifies
+stmt s1, s2; variable v;
+Select <s1, v> such that Affects(s1, s2) and Follows(s1, s2) and Modifies(s1, v)
+4 frog,50 violet,52 indigo
+5000
+15 - Affects Parent Pattern Calls
+stmt s1, s2, s3; variable v; procedure p, q; assign a;
+Select <p, q> such that Affects(s1, s2) and Parent*(s2, s3) pattern a(_,_) such that Calls(p, q)
+none
+5000
+16 - Affects Pattern Calls
+stmt s1, s2; variable v; procedure p, q; assign a;
+Select <a, s1> such that Affects(a, s1) pattern a("rhino", _) such that Calls(p, q)
+24 24
+5000
+17 - Affects Pattern Calls
+stmt s1, s2; variable v; procedure p, q; assign a;
+Select <a, s1> such that Affects(a, s1) pattern a("rhino", _) such that Calls(p, q) with p.procName = "foo" and a.stmt# = 10
+none
+5000
+18 - Affects Calls Next Affects
+stmt s1, s2, s3, s4; variable v; procedure p, q; assign a;
+Select <s1, s2, s3, s4> such that Affects(s1, s2) and Calls(p, q) and Next(s3, s4) and Affects(s3, s4)
+14 14 4 5,14 14 50 51,14 14 52 53,24 24 4 5,24 24 50 51,24 24 52 53,29 29 4 5,29 29 50 51,29 29 52 53,29 51 4 5,29 51 50 51,29 51 52 53,37 53 4 5,37 53 50 51,37 53 52 53,4 5 4 5,4 5 50 51,4 5 52 53,50 51 4 5,50 51 50 51,50 51 52 53,52 53 4 5,52 53 50 51,52 53 52 53,53 53 4 5,53 53 50 51,53 53 52 53
+5000
+19 - AffectsT Calls Next AffectsT
+stmt s, s1, s2, s3, s4; variable v; procedure p, q; assign a;
+Select <s1, s2, s3, s4> such that Affects*(s1, s2) and Calls(p, q) and Next(s3, s4) and Affects*(s3, s4) with s.stmt# = 1
+14 14 4 5,14 14 50 51,14 14 52 53,24 24 4 5,24 24 50 51,24 24 52 53,29 29 4 5,29 29 50 51,29 29 52 53,29 51 4 5,29 51 50 51,29 51 52 53,37 53 4 5,37 53 50 51,37 53 52 53,4 5 4 5,4 5 50 51,4 5 52 53,50 51 4 5,50 51 50 51,50 51 52 53,52 53 4 5,52 53 50 51,52 53 52 53,53 53 4 5,53 53 50 51,53 53 52 53
+5000
+20 - AffectsT Calls Next AffectsT
+stmt s, s1, s2, s3, s4; variable v; procedure p, q; assign a;
+Select <s1, s2, s3, s4> such that Affects*(s1, s2) and Calls(p, q) and Next(s3, s4) and Affects*(s3, s4) with s.stmt# = 69420
+none
+5000
+21 - AffectsT Calls Next AffectsT
+stmt s, s1, s2, s3, s4; variable v; procedure p, q; assign a;
+Select <s1, s2, s3, s4> such that Affects*(s1, s2) and Calls(p, q) and Next(s3, s4) and Affects*(s3, s4) with s1.stmt# = 4 with s2.stmt# = 5 with s3.stmt# = 4 with s4.stmt# = 5
+4 5 4 5
+5000
+22 - Uses Uses
+stmt s1, s2; variable v1, v2;
+Select <s1, s2> such that Uses(s1, v1) with s1.stmt# = 1 such that Uses(s2, v2) with v2.varName = "frog"
+1 1,1 13,1 16,1 18,1 19,1 2,1 21,1 22,1 23,1 25,1 3,1 32,1 36,1 39,1 4,1 41,1 43,1 45,1 47,1 5,1 7,1 8,1 9
+5000
+23 - Uses Uses Modifies Pattern
+stmt s1, s2; variable v1, v2; assign a;
+Select <s1, v1> such that Uses(s1, v1) and Uses(s2, v2) and Modifies(a, v1) pattern a(_, _)
+1 ant,1 capybara,1 frog,1 hippo,1 horse,1 iguana,1 indigo,1 koala,1 rhino,1 violet,13 ant,13 capybara,13 frog,13 hippo,13 horse,13 iguana,13 indigo,13 koala,13 rhino,13 violet,14 ant,16 capybara,16 frog,16 hippo,16 horse,16 iguana,16 indigo,16 koala,16 rhino,16 violet,18 capybara,18 frog,18 hippo,18 horse,18 iguana,18 indigo,18 koala,18 rhino,18 violet,19 frog,2 ant,2 capybara,2 frog,2 hippo,2 horse,2 iguana,2 indigo,2 koala,2 rhino,2 violet,21 capybara,21 frog,21 hippo,21 horse,21 iguana,21 indigo,21 koala,21 rhino,21 violet,22 capybara,22 frog,22 hippo,22 horse,22 iguana,22 indigo,22 koala,22 rhino,22 violet,23 capybara,23 frog,23 hippo,23 horse,23 iguana,23 indigo,23 koala,23 rhino,23 violet,24 rhino,25 capybara,25 frog,25 hippo,25 horse,25 iguana,25 indigo,25 koala,25 rhino,25 violet,26 capybara,26 hippo,26 horse,26 iguana,26 koala,26 rhino,28 hippo,29 hippo,3 ant,3 capybara,3 frog,3 hippo,3 horse,3 iguana,3 indigo,3 koala,3 rhino,3 violet,30 capybara,30 horse,30 koala,30 rhino,32 capybara,32 frog,32 hippo,32 horse,32 iguana,32 indigo,32 koala,32 rhino,32 violet,36 frog,36 hippo,36 horse,36 iguana,36 indigo,36 koala,36 violet,39 frog,39 hippo,39 horse,39 iguana,39 indigo,39 koala,39 violet,4 frog,41 frog,41 hippo,41 horse,41 iguana,41 indigo,41 violet,43 frog,43 hippo,43 horse,43 iguana,43 indigo,43 violet,45 frog,45 hippo,45 horse,45 indigo,45 violet,47 frog,47 hippo,47 horse,47 indigo,47 violet,49 hippo,49 horse,49 indigo,49 violet,5 frog,51 hippo,51 violet,53 horse,53 indigo,7 capybara,7 frog,7 hippo,7 horse,7 iguana,7 indigo,7 koala,7 rhino,7 violet,8 ant,8 capybara,8 frog,8 hippo,8 horse,8 iguana,8 indigo,8 koala,8 rhino,8 violet,9 ant,9 capybara,9 frog,9 hippo,9 horse,9 iguana,9 indigo,9 koala,9 rhino,9 violet
+5000
+24 - Uses FollowsT ParentT Calls
+stmt s1, s2, s3, s4; variable v1, v2; procedure p, q;
+Select <s1, s2, s3, s4> such that Uses(s1, v1) and Follows*(s1, s2) and Parent*(s3, s4) and Calls(p, q) with s1.stmt# = 1
+none
+5000
+25 - Uses NextT Modifies Pattern
+stmt s1, s2; variable v1, v2; assign a;
+Select <a, v1> such that Uses(s1, v1) and Next*(s1, s2) and Modifies(a, v1) pattern a(_, _)
+10 rhino,14 ant,19 frog,24 rhino,29 hippo,30 iguana,33 capybara,34 capybara,35 capybara,37 horse,38 koala,4 frog,50 violet,51 capybara,52 indigo,53 horse
+5000
+26 - Uses NextT Modifies Pattern
+stmt s1, s2; variable v1, v2; assign a;
+Select <s1, v1> such that Uses(s1, v1) and Next*(s1, s2) and Modifies(a, v1) pattern a(_, _) with s1.stmt# = 1
+1 ant,1 capybara,1 frog,1 hippo,1 horse,1 iguana,1 indigo,1 koala,1 rhino,1 violet
+5000
+27 - Uses Modifies
+stmt s1, s2; variable v1, v2; assign a; procedure p;
+Select <p, a> such that Uses(p, v1) and Modifies(a, v1)
+bar 10,bar 19,bar 24,bar 29,bar 30,bar 33,bar 34,bar 35,bar 37,bar 38,bar 4,bar 50,bar 51,bar 52,bar 53,baz 10,baz 19,baz 24,baz 29,baz 30,baz 33,baz 34,baz 35,baz 37,baz 38,baz 4,baz 50,baz 51,baz 52,baz 53,foo 10,foo 14,foo 19,foo 24,foo 29,foo 30,foo 33,foo 34,foo 35,foo 37,foo 38,foo 4,foo 50,foo 51,foo 52,foo 53
+5000
+28 - Uses ParentT AffectsT FollowsT
+stmt s1, s2; variable v1, v2; assign a1, a2;
+Select <s1, s2> such that Uses(s1, v1) and Parent*(s1, s2) and Affects*(a1, a2) and Follows*(s1, s2)
+none
+5000

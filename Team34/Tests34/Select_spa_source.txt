@@ -1,0 +1,26 @@
+procedure p1 {
+	a = 1;
+	b = 2;
+	if (a == b) then {
+		c = 3;
+	} else {
+		b = b + 1;
+	}
+	d = 4;
+}
+
+procedure p2 {
+	print ryan;
+	read nat;
+}
+
+procedure p3 {
+	read jon;
+	read fred;
+	call p4;
+}
+
+procedure p4 {
+	cx = jon + nat + fred;
+	print cx;
+}

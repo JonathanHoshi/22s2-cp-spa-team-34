@@ -1,0 +1,22 @@
+procedure followscontainer {
+if (b == 1) then {
+	read x;
+	y = y * 2;
+	} else {
+		t = y + z;
+		print a;
+	}
+	while (r == 2) {
+		x = y * 2;
+	}
+	while (r == 2) {
+		if (b == 1) then {
+			a = a + 1;
+		} else {
+			a = a + 1;
+		}
+		while (r == 2) {
+			a = a + 1;
+		}
+	}
+}

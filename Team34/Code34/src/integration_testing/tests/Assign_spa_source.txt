@@ -1,0 +1,28 @@
+procedure Bako {
+  read nat;
+  cx = 5;
+  fred = 7;
+  
+  while (nat < 5 + fred) {
+     nat = nat + 1;
+     read jon;
+
+	if (jon ==fred) then {
+	   fred =  nat + jon;
+        while (ryan < 1) {
+           fred = ryan;
+           outong = ryan;
+        }
+
+     } else {
+	   print nat;
+     }
+
+     fred = nat + jon * (cx + 69);
+  }
+  nat = (nat * (nat + 1)) * (fred + cx * jon);
+  outong = ((nat * nat) + 1) * ((ryan + cx) * jon);
+  outong = 7;
+
+  print nat;
+}

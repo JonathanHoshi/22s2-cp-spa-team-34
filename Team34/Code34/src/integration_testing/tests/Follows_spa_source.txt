@@ -1,0 +1,64 @@
+procedure follows {
+	a = 1;
+	b = a + 2;
+	c = a + (b/3);
+	while (d + e == e + f) {
+		print h;
+		h = ((h + 4)) - ((h * 4));
+		if (((i + 5 + 6)/2 < (j + 1 + 2)) && (j <= 2)) then {
+			read follows2;
+			call follows2;
+			k = k + 1 + 2;
+		} else {
+			ll = mmm * nnn + ooo;
+			ll = mmm * nnn + ooo;
+			ll = mmm * nnn + ooo;
+		}
+		call follows2;
+		call follows2;
+		print follows2;
+	} 
+	a = 1;
+	b = a + 2;
+	c = a + (b/3);
+}
+
+procedure follows2 {
+	c = a + (b/3);
+	if (((i + 5 + 6)/2 < (j + 1 + 2)) && (j <= 2)) then {
+		while (d + e == e + f) {
+			read j;
+		}
+		while (d + e == e + f) {
+			if (x == 1) then {
+				f = f + 1;
+			} else {
+				f = f + 1;
+			}
+		}
+		while (d + e == e + f) {
+			f = f + 1;
+		}
+	}
+	else {
+		if (x == 1) then {
+			while (x == 1) {
+				x = 1;
+			}
+		} else {
+			x = x + 1;
+		}
+		if (x == 1) then {
+			x = x + 1;
+		} else {
+			x = x + 1;
+		}
+		ll = mmm * nnn + ooo;
+		if (x == 1) then { 
+			x = x + 1;
+		} else {
+			x = x + 1;
+		}
+	}
+	a = 1;
+}

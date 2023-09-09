@@ -1,0 +1,6 @@
+procedure p12 {
+	x = a * c + (b + y) * ((z));
+	t = 1;
+	print a;
+	read k;
+}

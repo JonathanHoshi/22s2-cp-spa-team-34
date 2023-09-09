@@ -1,0 +1,38 @@
+procedure Banana {
+	w = 1 + 2 * 3;				
+	x = 20;						
+	y = w / x;					
+	if (y > 0) then {			
+		x = w * 2;				
+	} else {
+		while (y < 0) {			
+			if (y % 2 == 0) then {	
+				x = y / 2;		
+			} else {
+				x = 10;	
+			}
+			y = y + 1;			
+		}
+	}
+}
+
+procedure Potato {
+	print y;					
+	if (w != 0) then {			
+		w = w + 3;				
+	} else {
+		x = 2;			
+	}
+}
+
+procedure Ditto {
+	print x;					
+	while (2 > 0) {				
+		y = y + 1;
+	}
+	if (3 > 4) then {			
+		y = y + 1;
+	} else {
+		y = y + 1;
+	}
+}

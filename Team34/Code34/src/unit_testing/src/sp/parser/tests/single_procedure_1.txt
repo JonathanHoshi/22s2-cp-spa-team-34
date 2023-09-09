@@ -1,0 +1,6 @@
+procedure example {
+	flag = 0;
+	read x;
+	print y;
+	call exampleTwo;
+}

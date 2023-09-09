@@ -1,0 +1,3 @@
+procedure example {
+	print 20;
+}

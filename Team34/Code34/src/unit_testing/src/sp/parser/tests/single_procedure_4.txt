@@ -1,0 +1,15 @@
+procedure example {
+	while ((y >= 0) && (x <= 0)) {
+		if (!(x != 0)) then {
+			print y;
+			if (x < 10) then {
+				print x;
+			} else {
+				y = y - 2;
+			}
+		} else {
+			x = x + 1;
+		}
+		call exampleTwo;
+	}
+}

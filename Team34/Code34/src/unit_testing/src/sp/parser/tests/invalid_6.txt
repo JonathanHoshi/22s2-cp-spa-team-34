@@ -1,0 +1,7 @@
+procedure example {
+	if (x == 1) then {
+	
+	} else {
+	
+	}
+}

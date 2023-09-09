@@ -1,0 +1,146 @@
+1 - All WildCard
+stmt s;
+Select s such that Next (_, _)
+1, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20, 21, 3, 4, 5, 6, 7, 8, 9
+5000
+2 - WildCard and statement
+stmt s;
+Select s such that Next(_, s)
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21
+5000
+3 - Statement and WildCard
+stmt s;
+Select s such that Next (s, _)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+5000
+4 - First if
+stmt s;
+Select s such that Next (1, s)
+2, 12
+5000
+5 - First if
+stmt s;
+Select s such that Next (s, 1)
+none
+5000
+6 - Second nested if
+stmt s;
+Select s such that Next (4, s)
+5, 11
+5000
+7 - Second nested if
+stmt s;
+Select s such that Next (s, 4)
+3
+5000
+8 - third nexted if
+stmt s;
+Select s such that Next (7, s)
+8, 10
+5000
+9 - third nested if
+stmt s;
+Select s such that Next (s, 7)
+6
+5000
+10 - First while
+stmt s;
+Select s such that Next (13, s)
+14, 21
+5000
+11 - First while
+stmt s;
+Select s such that Next (s, 13)
+9, 10, 11, 12, 20
+5000
+12 - Second nested while
+stmt s;
+Select s such that Next (15, s)
+16, 20
+5000
+13 - Second nested while
+stmt s;
+Select s such that Next (s, 15)
+14, 19
+5000
+14 - third nested while
+stmt s;
+Select s such that Next (17, s)
+18, 19
+5000
+15 - third nested while
+stmt s;
+Select s such that Next (s, 17)
+16, 18
+5000
+16 - Stmt in First while
+stmt s;
+Select s such that Next (14, s)
+15
+5000
+17 - Stmt in First while
+stmt s;
+Select s such that Next (s, 14)
+13
+5000
+18 - Stmt after First while
+stmt s;
+Select s such that Next (21, s)
+none
+5000
+19 - Stmt after First while
+stmt s;
+Select s such that Next (s, 21)
+13
+5000
+20 - Stmt in First while
+stmt s;
+Select s such that Next (14, s)
+15
+5000
+21 - Stmt in First while
+stmt s;
+Select s such that Next (s, 14)
+13
+5000
+22 - Stmt after second while
+stmt s;
+Select s such that Next (20, s)
+13
+5000
+23 - Stmt after second while
+stmt s;
+Select s such that Next (s, 20)
+15
+5000
+24 - Stmt in second while
+stmt s;
+Select s such that Next (16, s)
+17
+5000
+25 - Stmt in second while
+stmt s;
+Select s such that Next (s, 16)
+15
+5000
+26 - Stmt after third while
+stmt s;
+Select s such that Next (19, s)
+15
+5000
+27 - Stmt after third while
+stmt s;
+Select s such that Next (s, 19)
+17
+5000
+28 - Stmt in third while
+stmt s;
+Select s such that Next (18, s)
+17
+5000
+29 - Stmt in third while
+stmt s;
+Select s such that Next (18, s)
+17
+5000
+

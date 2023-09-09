@@ -1,0 +1,55 @@
+procedure Parent {
+	a = 1;
+	b = 2;
+	if ((b == 2) && (c == 3)) then {
+		read d;
+		while (d == e + f) {
+			print g;
+			if (g == 1) then {
+				h = 2;
+				i = 3;
+				read i;
+			} else {
+				i = 4;
+				j = 5;
+				print j;
+			}
+			k = 6;
+		}
+	} else {
+		app = k + 7;
+		k = app + 8;
+	}
+	c = d + e + f + g;
+	while (l == 6) {
+		call Stub;
+		while (m == n + 7) {
+			print m;
+			m = m + 1 + 2;
+			if (n == 7) then {
+				if (n == 8) then {
+					n = 9;
+					call Stub;
+				} else {
+					o = 10;
+					call Stub;
+				}
+			} else {
+				n = n + 1;
+			}
+		}
+	}
+
+}
+
+procedure Stub {
+	a = a + b;
+	if (x == 2) then {
+		n = n + 1;
+	} else {
+		n = n + 1;
+	}
+	while (y == 2) {
+		n = n + 1;
+	}
+}

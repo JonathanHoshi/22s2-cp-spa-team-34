@@ -1,0 +1,86 @@
+procedure foo {
+    if (frog <= lion) then {
+        while ((giraffe > 0) && (frog >= 0)) {
+            if (cat < dog) then {
+                frog = 7 * (frog + 2);
+                gorilla = frog + giraffe * 2 - lion;
+                print giraffe;
+                call bar;
+            } else {
+                while (elephant >= fox) {
+                    if (hamster == rabbit) then {
+                        rhino = tiger + owl * kangaroo / llama;
+                        read dragon;
+                        print pig;
+                    } else {
+                        while (monkey <= penguin) {
+                            ant = ant - 1;
+                            print rat;
+                            if (bee >= chicken) then {
+                                dolphin = flamingo + gazelle;
+                            } else {
+                                call baz;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } else {
+        frog = frog / 2;
+        print butterfly;
+    }
+}
+
+procedure bar {
+    while (cat < dog) {
+        while (elephant > fox) {
+            while (hamster <= rabbit) {
+                rhino = rhino * tiger + owl - kangaroo / llama;
+                call baz;
+            }
+        }
+    }
+}
+
+procedure baz {
+    while (((iguana < 100) && (iguana >= 0)) || (iguana != 69)) {
+        read frog;
+        while (duck != lizard) {
+            hippo = hippo * 2;
+        }
+        iguana = jaguar + koala + capybara + horse - rhino;
+        print ostrich;
+    }
+    while (capybara == rhino) {
+        capybara = 5;
+        capybara = 4;
+        capybara = 3;
+        while (horse == 2) {
+            horse = 1;
+            koala = 6;
+            while (koala == 6) {
+                red = 1;
+                while (jaguar == 6) {
+                    orange = 2;
+                    while (iguana == 6) {
+                        yellow = 3;
+                        while (duck == 6) {
+                            green = 3;
+                            while (frog == 6) {
+                                blue = 3;
+                                if (lizard != ostrich) then {
+                                    violet = 3;
+                                    capybara = violet + hippo;
+                                } else {
+                                    indigo = 3;
+                                    horse = horse * indigo;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

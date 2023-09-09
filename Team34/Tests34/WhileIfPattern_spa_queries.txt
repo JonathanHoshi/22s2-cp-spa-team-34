@@ -1,0 +1,265 @@
+1 - If all wildcard parameters
+if ifs;
+Select ifs pattern ifs(_,_,_)
+2,7,16,17,18,21,24,25,28,60
+5000
+2 - While all wildcard parameters
+while w;
+Select w pattern w(_,_)
+5,6,31,32,33,34,35,36,37,55
+5000
+3 - If variable parameter 1
+if ifs;
+Select ifs pattern ifs("a", _, _)
+16,21,24,28
+5000
+4 - If variable parameter 2
+if ifs;
+Select ifs pattern ifs("b", _, _)
+2,16,21,24,28
+5000
+5 - If variable parameter 3
+if ifs;
+Select ifs pattern ifs("d", _, _)
+2,21,28
+5000
+6 - If variable parameter 4
+if ifs;
+Select ifs pattern ifs("n", _, _)
+60
+5000
+7 - While variable parameter 1
+while w;
+Select w pattern w("a", _)
+5,6
+5000
+8 - While variable parameter 2
+while w;
+Select w pattern w("b", _)
+5,6,32,34,36
+5000
+9 - While variable parameter 3
+while w;
+Select w pattern w("z", _)
+31,33,35,37
+5000
+10 - While variable parameter 4
+while w;
+Select w pattern w("n", _)
+55
+5000
+11 - If synonym parameter 1
+if ifs; variable v;
+Select v pattern ifs(v, _, _)
+a,b,c,d,e,f,g,h,i,n
+5000
+12 - While synonym parameter 1
+while w; variable v;
+Select v pattern w(v,_)
+a,b,c,d,s,t,u,v,w,x,y,z,n
+5000
+13 - Syntax error if 1
+if ifs;
+Select ifs pattern ifs("a", "x", _)
+SyntaxError
+5000
+14 - Syntax error if 2
+if ifs;
+Select ifs pattern ifs(_, "x", _)
+SyntaxError
+5000
+15 - Syntax error if 3
+if ifs;
+Select ifs pattern ifs("a", _, "x")
+SyntaxError
+5000
+16 - Syntax error if 4
+if ifs;
+Select ifs pattern ifs(_, _, "x")
+SyntaxError
+5000
+17 - Syntax error if 5
+if ifs;
+Select ifs pattern 9ifs(_, _, _)
+SyntaxError
+5000
+18 - Syntax error if 6
+if ifs;
+Select ifs pattern 9ifs("a", _, _)
+SyntaxError
+5000
+19 - Syntax error if 7
+if ifs;
+Select ifs pattern ifs("9a", _, _)
+SyntaxError
+5000
+20 - Syntax error if 8
+if ifs;
+Select ifs pattern ifs("10", _, _)
+SyntaxError
+5000
+21 - Syntax error if 9
+if ifs; variable v;
+Select ifs pattern ifs(v, "x", _)
+SyntaxError
+5000
+22 - Syntax error if 10
+if ifs; variable v;
+Select ifs pattern ifs(v, _, "x")
+SyntaxError
+5000
+23 - Syntax error if 11
+if ifs;
+Select ifs pattern ifs("a",_,"99")
+SyntaxError
+5000
+24 - Syntax error if 12
+if ifs;
+Select ifs pattern ifs("a", _, _, _)
+SyntaxError
+5000
+25 - Syntax error while 1
+while w;
+Select w pattern 9w("a", _)
+SyntaxError
+5000
+26 - Syntax error while 2
+while w;
+Select w pattern w("10", _)
+SyntaxError
+5000
+27 - Syntax error while 3
+while w;
+Select w pattern w("1a", _)
+SyntaxError
+5000
+28 - Syntax error while 4
+while w;
+Select w pattern w("a", v)
+SyntaxError
+5000
+29 - Syntax error while 5
+while w;
+Select w pattern w("a")
+SyntaxError
+5000
+30 - Semantic error while 1
+while w;
+Select w pattern w(_, "a")
+SemanticError
+5000
+31 - Semantic error while 2
+while w;
+Select w pattern w("a", "a")
+SemanticError
+5000
+32 - Semantic error while 3
+while w; variable v;
+Select w pattern w(v, "a")
+SemanticError
+5000
+33 - Semantic error while 4
+while w; variable v;
+Select w pattern w1(v, _)
+SemanticError
+5000
+34 - Semantic error while 5
+while w; variable v;
+Select w pattern w(v1, _)
+SemanticError
+5000
+35 - Semantic error while 6
+while w;
+Select w pattern w("a", _, _)
+SemanticError
+5000
+36 - Semantic error while 7
+while w;
+Select w pattern w1("a", _, _)
+SemanticError
+5000
+37 - Syntax error handling 1
+while w;
+Select w pattern w(_, "99")
+SemanticError
+5000
+38 - Semantic error if 1
+if ifs; variable v;
+Select ifs pattern if(v, _, _)
+SemanticError
+5000
+39 - Semantic error if 2
+if ifs; variable v;
+Select ifs pattern ifs(v1, _, _)
+SemanticError
+5000
+40 - Semantic error if 3
+if ifs;
+Select ifs pattern ifs("a", _)
+SemanticError
+5000
+41 - Semantic error if 4
+if ifs;
+Select w pattern w("a", "99")
+SemanticError
+5000
+42 - None answer if 1
+if ifs;
+Select ifs pattern ifs("xxx", _, _)
+none
+5000
+43 - None answer while 1
+while w;
+Select w pattern w("xxx", _)
+none
+5000
+44 - Syntax error precedes Semantic 1
+if ifs;
+Select ifs pattern if("a", "x", _)
+SyntaxError
+5000
+45 - Syntax error precedes Semantic 2
+if ifs;
+Select ifs pattern if("a", _, _, _)
+SyntaxError
+5000
+46 - Assign While Semantic 1
+while w;
+Select w pattern w("a", _"a"_)
+SemanticError
+5000
+47 - Assign While Semantic 2
+while w;
+Select w pattern w("a", "a")
+SemanticError
+5000
+48 - Assign While Semantic 3
+while w; variable v;
+Select w pattern w(v, _"a"_)
+SemanticError
+5000
+49 - Assign While Semantic 4
+while w; variable v;
+Select w pattern w(v, "a")
+SemanticError
+5000
+50 - Assign If Semantic 1
+if w;
+Select w pattern w("a", _"a"_)
+SemanticError
+5000
+51 - Assign If Semantic 2
+if w;
+Select w pattern w("a", "a")
+SemanticError
+5000
+52 - Assign If Semantic 3
+if w; variable v;
+Select w pattern w(v, _"a"_)
+SemanticError
+5000
+53 - Assign If Semantic 4
+if w; variable v;
+Select w pattern w(v, "a")
+SemanticError
+5000

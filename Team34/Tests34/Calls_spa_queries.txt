@@ -1,0 +1,180 @@
+1 - Select p
+procedure p;
+Select p
+p1, p2, p3, p4, p5, p6
+5000
+2 - Synonym, Synonym - Select p - Calls(p, p1)
+procedure p, p1;
+Select p such that Calls(p, p1)
+p1, p2, p3
+5000
+3 - Synonym, Synonym - Select p1 - Calls(p, p1)
+procedure p, p1;
+Select p1 such that Calls(p, p1)
+p2, p3, p4, p5, p6
+5000
+4 - IDENT, Synonym - Select p - Has Result
+procedure p;
+Select p such that Calls("p2", p)
+p5
+5000
+5 - IDENT, Synonym - Select p - No Result
+procedure p;
+Select p such that Calls("p4", p)
+none
+5000
+6 - Synonym, IDENT - Select p - Has Result
+procedure p;
+Select p such that Calls(p, "p5")
+p2
+5000
+7 - Synonym, IDENT - Select p - No Result
+procedure p;
+Select p such that Calls(p, "p1")
+none
+5000
+8 - IDENT, IDENT - Select p - Has Result
+procedure p;
+Select p such that Calls("p1", "p2")
+p1, p2, p3, p4, p5, p6
+5000
+9 - IDENT, IDENT - Select p - No Result (transitive true)
+procedure p;
+Select p such that Calls("p1", "p5")
+none
+5000
+10 - IDENT, IDENT - Select p - No Result (transitive false)
+procedure p;
+Select p such that Calls("p2", "p1")
+none
+5000
+11 - Synonym, Wildcard - Select p - Calls(p, _)
+procedure p;
+Select p such that Calls(p, _)
+p1, p2, p3
+5000
+12 - Wildcard, Synonym - Select p - Calls(_, p)
+procedure p;
+Select p such that Calls(_, p)
+p2, p3, p4, p5, p6
+5000
+13 - Wildcard, Wildcard - Select p - Calls(_, _)
+procedure p;
+Select p such that Calls(_, _)
+p1, p2, p3, p4, p5, p6
+5000
+14 - IDENT, Wildcard - Select p - Has Result
+procedure p;
+Select p such that Calls("p3", _)
+p1, p2, p3, p4, p5, p6
+5000
+15 - IDENT, Wildcard - Select p - No Result
+procedure p;
+Select p such that Calls("p5", _)
+none
+5000
+16 - Wildcard, IDENT - Select p - Has Result
+procedure p;
+Select p such that Calls(_, "p3")
+p1, p2, p3, p4, p5, p6
+5000
+17 - Wildcard, IDENT - Select p - Has Result
+procedure p;
+Select p such that Calls(_, "p1")
+none
+5000
+18 - Select p
+procedure p;
+Select p
+p1, p2, p3, p4, p5, p6
+5000
+19 - Synonym, Synonym - Select p - Calls*(p, p1)
+procedure p, p1;
+Select p such that Calls*(p, p1)
+p1, p2, p3
+5000
+20 - Synonym, Synonym - Select p1 - Calls*(p, p1)
+procedure p, p1;
+Select p1 such that Calls*(p, p1)
+p2, p3, p4, p5, p6
+5000
+21 - IDENT, Synonym - Select p - Has Result (Call test)
+procedure p;
+Select p such that Calls*("p2", p)
+p5
+5000
+22 - IDENT, Synonym - Select p - Has Result
+procedure p;
+Select p such that Calls*("p1", p)
+p2, p3, p4, p5, p6
+5000
+23 - IDENT, Synonym - Select p - No Result
+procedure p;
+Select p such that Calls*("p4", p)
+none
+5000
+24 - Synonym, IDENT - Select p - Has Result (Call test)
+procedure p;
+Select p such that Calls*(p, "p2")
+p1
+5000
+25 - Synonym, IDENT - Select p - Has Result
+procedure p;
+Select p such that Calls*(p, "p5")
+p1, p2
+5000
+26 - Synonym, IDENT - Select p - No Result
+procedure p;
+Select p such that Calls*(p, "p1")
+none
+5000
+27 - IDENT, IDENT - Select p - Has Result (Call test)
+procedure p;
+Select p such that Calls*("p1", "p2")
+p1, p2, p3, p4, p5, p6
+5000
+28 - IDENT, IDENT - Select p - Has Result
+procedure p;
+Select p such that Calls*("p1", "p5")
+p1, p2, p3, p4, p5, p6
+5000
+29 - IDENT, IDENT - Select p - No Result
+procedure p;
+Select p such that Calls*("p2", "p1")
+none
+5000
+30 - Synonym, Wildcard - Select p - Calls*(p, _)
+procedure p;
+Select p such that Calls*(p, _)
+p1, p2, p3
+5000
+31 - Wildcard, Synonym - Select p - Calls*(p, _)
+procedure p;
+Select p such that Calls*(_, p)
+p2, p3, p4, p5, p6
+5000
+32 - Wildcard, Wildcard - Select p - Calls*(_, _)
+procedure p;
+Select p such that Calls*(_, _)
+p1, p2, p3, p4, p5, p6
+5000
+33 - IDENT, Wildcard - Select p - Has Result
+procedure p;
+Select p such that Calls*("p3", _)
+p1, p2, p3, p4, p5, p6
+5000
+34 - IDENT, Wildcard - Select p - No Result
+procedure p;
+Select p such that Calls*("p5", _)
+none
+5000
+35 - Wildcard, IDENT - Select p - Has Result
+procedure p;
+Select p such that Calls*(_, "p3")
+p1, p2, p3, p4, p5, p6
+5000
+36 - Wildcard, IDENT - Select p - Has Result
+procedure p;
+Select p such that Calls*(_, "p1")
+none
+5000
